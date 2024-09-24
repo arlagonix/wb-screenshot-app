@@ -57,6 +57,32 @@ After that I decided to turn that solution from a simple Node app into an Electr
 
 Good news: it worked. Bad news: she has to install all dependencies because for some reason that .exe file created by Electron refused to launch Chromium based browser for screenshots (alas!) although other parts of the app work, that's very, very strange. Don't know how to fix it
 
+### How it works
+
+You write down ids of Wildberries products in a text file and separate them by a newline character
+
+E.g. for `https://www.wildberries.ru/catalog/218924051/detail.aspx` the id will be `218924051`
+
+So you get a text file that might look like this:
+
+```txt
+104870004
+228056127
+149564395
+219783704
+233059870
+```
+
+Launch the app. From .exe if you build it, or via `npm start`
+
+Select a file. There is a button for that (sorry, but everything is in Russian there)
+
+Launch screenshot action. There is another button for that also in Russian
+
+There will show a browser that will open the pages. E.g. for id `218924051` it will open the page `https://www.wildberries.ru/catalog/218924051/detail.aspx` and so on. Then it will make screenshots of those pages and close the browser
+
+The results will be in the same folder as the file with ids in a folder named `results`
+
 ## ⚙️ Tools
 
 - **HTML5**
