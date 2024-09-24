@@ -1,0 +1,44 @@
+{
+  "name": "screenshot-app",
+  "version": "1.0.0",
+  "description": "Приложение для создания скриншотов товаров",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.yourapp.screenshot",
+    "productName": "ScreenshotApp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "package.json",
+      "node_modules/puppeteer/.local-chromium/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": []
+    },
+    "linux": {
+      "target": []
+    }
+  },
+  "dependencies": {
+    "puppeteer": "^23.4.0",
+    "screenshot-desktop": "^1.15.0"
+  },
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5"
+  }
+}
