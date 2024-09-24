@@ -2,7 +2,7 @@
 <p align="center">
   Made with <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, <code>Electron</code>
   <br>
-  Bootstrapped with <code>Electron/code>
+  Bootstrapped with <code>Electron</code>
 </p>
 
 <p align="center">
